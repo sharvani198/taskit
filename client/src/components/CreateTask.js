@@ -23,19 +23,23 @@ const CreateTask = () => {
   return (
 
     <Form className="create-form">
-        <Form.Field>
+        <Form.Field inline required width={6}>
+            <label textAlign='left'>Task Name</label>
             <input placeholder='Task Name' onChange={(e) => setTaskName(e.target.value)} />
         </Form.Field>
-        <Form.Field>
+        <Form.Field inline required width={6}>
+            <label>Status</label>
             <input placeholder='Status' onChange={(e) => setTaskStatus(e.target.value)} />
         </Form.Field>
-        <Form.Field>
+        <Form.Field inline required width={6}>
+            <label>Author</label>
             <input placeholder='Task source' onChange={(e) => setTaskSource(e.target.value)} />
         </Form.Field>
-        <Form.Field>
+        <Form.Field inline required width={6}>
+            <label>Task Description</label>
             <input placeholder='Description' onChange={(e) => setTaskDescription(e.target.value)} />
         </Form.Field>
-        <Button onClick={postData} type='submit'>Submit</Button>
+        <Button onClick={postData} type='submit'>Create</Button>
     </Form>
   )
 }
